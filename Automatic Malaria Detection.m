@@ -17,3 +17,4 @@ figure,imshow(Iblur);
 level=graythresh(I)
 Ibin=imbinarize(I,norm(level/3)); %binarizing the image
 figure,imshow(Ibin);
+se1 = strel('disk',3,0) % it can  be other shapes too.
