@@ -95,6 +95,12 @@ w2=u1;
  for i=1:length(DBx1)
  DBx2(i,:) = (coefficient(1,1)*DBx1(:,i)+constant)/(-coefficient(1,2));
  end
+ %{
+ for i=1:length(DBx)
+ DBx2(i,1) = (3*DBx1(1,i)+7.0312)/(1.5);
+ end
+ %}
  data=svmtrain([w1,w2]',['malaria';'malaria';'normal ';'normal ']);
+ 
  result=svmclassify(data,x);
- msgbox( sprintf('the result is : %s', string(result(1,:))));
+ msgbox( sprintf('The detected result is : %s', string(result(1,:))));
