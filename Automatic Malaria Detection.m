@@ -60,7 +60,6 @@ end
 x1=homop;
 x2=dissi;
 x=[x1(1);x2(2)]
-%%
 w1=u;
 w2=u1;
  figure
